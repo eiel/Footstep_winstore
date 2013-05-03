@@ -22,6 +22,8 @@ namespace Footstep
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private bool IsAnimate;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -36,6 +38,7 @@ namespace Footstep
         {
             Storyboard1.Completed += new EventHandler<object>(this.StartAnimation);
             this.StartAnimation(null,null);
+            IsAnimate = true;
 
             this.SizeChanged += MainPage_SizeChanged;
         }
@@ -50,6 +53,36 @@ namespace Footstep
         {
             Storyboard1.AutoReverse = true;
             Storyboard1.Begin();
+        }
+
+        private void Pause_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsAnimate)
+            {
+                Storyboard1.Pause();
+                IsAnimate = false;
+                pause_button.Content = "再開";
+            }
+            else
+            {
+                Storyboard1.Resume();
+                IsAnimate = true;
+                pause_button.Content = "一時停止";
+            }
+        }
+
+        private void Hide_Click(object sender, RoutedEventArgs e)
+        {
+            if (background.Visibility == Visibility.Visible)
+            {
+                background.Visibility = Visibility.Collapsed;
+                hide_button.Content = "背景を表示";
+            }
+            else
+            {
+                background.Visibility = Visibility.Visible;
+                hide_button.Content = "背景を隠す";
+            }
         }
     }
 }
