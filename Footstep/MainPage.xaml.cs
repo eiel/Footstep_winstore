@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -35,6 +36,14 @@ namespace Footstep
         {
             Storyboard1.Completed += new EventHandler<object>(this.StartAnimation);
             this.StartAnimation(null,null);
+
+            this.SizeChanged += MainPage_SizeChanged;
+        }
+
+        void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+           string viewstate = ApplicationView.Value.ToString();
+            VisualStateManager.GoToState(this, viewstate, false);
         }
 
         public void StartAnimation(Object sender, Object evt)
