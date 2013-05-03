@@ -6,8 +6,55 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+	<Page.Resources>
+		<Storyboard x:Name="Storyboard1">
+			<DoubleAnimation Duration="0:0:10" To="230" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="blue" d:IsOptimized="True"/>
+			<DoubleAnimation Duration="0:0:10" To="230" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="yellow" d:IsOptimized="True"/>
+		</Storyboard>
+	</Page.Resources>
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{StaticResource AppBarItemPointerOverBackgroundThemeBrush}">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="1179*"/>
+    		<ColumnDefinition Width="187*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="95*"/>
+    		<RowDefinition Height="8*"/>
+    		<RowDefinition Height="153*"/>
+    	</Grid.RowDefinitions>
+        <Viewbox Margin="0,-1,10,0" Grid.RowSpan="3" VerticalAlignment="Top" >
+        	<Canvas HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Width="240" Background="White">
+        		<Canvas Height="180" Canvas.Left="40" Width="160" Background="Black">
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="5"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="15"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="25"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="35"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="45"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="55"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="65"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="75"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="85"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="95"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="105"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="115"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="125"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="135"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="145"/>
+        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="155"/>
+        		</Canvas>
+        		<Rectangle x:Name="yellow" Fill="#FFFFFF50" HorizontalAlignment="Left" Height="10" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="10" Canvas.Top="60" RenderTransformOrigin="0.773,-1.233">
+        			<Rectangle.RenderTransform>
+        				<CompositeTransform/>
+        			</Rectangle.RenderTransform>
+        		</Rectangle>
+        		<Rectangle x:Name="blue" Fill="#FF1E1EFF" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" StrokeThickness="0" RenderTransformOrigin="0.5,0.5" Canvas.Top="100">
+        			<Rectangle.RenderTransform>
+        				<CompositeTransform/>
+        			</Rectangle.RenderTransform>
+        		</Rectangle>
+        	</Canvas>
+        </Viewbox>
 
     </Grid>
 </Page>

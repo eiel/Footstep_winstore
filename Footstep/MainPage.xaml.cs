@@ -33,6 +33,14 @@ namespace Footstep
         /// プロパティは、通常、ページを構成するために使用します。</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Storyboard1.Completed += new EventHandler<object>(this.StartAnimation);
+            this.StartAnimation(null,null);
+        }
+
+        public void StartAnimation(Object sender, Object evt)
+        {
+            Storyboard1.AutoReverse = true;
+            Storyboard1.Begin();
         }
     }
 }
