@@ -13,48 +13,309 @@
 		</Storyboard>
 	</Page.Resources>
 
-    <Grid Background="{StaticResource AppBarItemPointerOverBackgroundThemeBrush}">
-    	<Grid.ColumnDefinitions>
-    		<ColumnDefinition Width="1179*"/>
-    		<ColumnDefinition Width="187*"/>
-    	</Grid.ColumnDefinitions>
-    	<Grid.RowDefinitions>
-    		<RowDefinition Height="95*"/>
-    		<RowDefinition Height="8*"/>
-    		<RowDefinition Height="153*"/>
-    	</Grid.RowDefinitions>
-        <Viewbox Margin="0,-1,10,0" Grid.RowSpan="3" VerticalAlignment="Top" >
-        	<Canvas HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Width="240" Background="White">
-        		<Canvas Height="180" Canvas.Left="40" Width="160" Background="Black">
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="5"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="15"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="25"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="35"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="45"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="55"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="65"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="75"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="85"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="95"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="105"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="115"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="125"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="135"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="145"/>
-        			<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="155"/>
-        		</Canvas>
-        		<Rectangle x:Name="yellow" Fill="#FFFFFF50" HorizontalAlignment="Left" Height="10" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="10" Canvas.Top="60" RenderTransformOrigin="0.773,-1.233">
-        			<Rectangle.RenderTransform>
-        				<CompositeTransform/>
-        			</Rectangle.RenderTransform>
-        		</Rectangle>
-        		<Rectangle x:Name="blue" Fill="#FF1E1EFF" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" StrokeThickness="0" RenderTransformOrigin="0.5,0.5" Canvas.Top="100">
-        			<Rectangle.RenderTransform>
-        				<CompositeTransform/>
-        			</Rectangle.RenderTransform>
-        		</Rectangle>
-        	</Canvas>
-        </Viewbox>
+    <Viewbox>
 
-    </Grid>
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="ApplicationViewStates">
+				<VisualState x:Name="FullScreenLandscape">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>364</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>188</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>40</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>40</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>704</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Filled">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="canvas">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>1024</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>600</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>112</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>140</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>163</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>20</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>573</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>20</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="FullScreenPortrait">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>279</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>-627</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>804</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>-627</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>192</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>10</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>760</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Snapped">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<HorizontalAlignment>Left</HorizontalAlignment>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Thickness>0</Thickness>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>320</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>240</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<VerticalAlignment>Center</VerticalAlignment>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Thickness>0</Thickness>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Int32>1</x:Int32>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Thickness>0</Thickness>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="canvas">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>320</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>10</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>20</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>10</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="button1">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>125</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>-10</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="viewbox">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>288</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Canvas x:Name="canvas" Height="768" Width="1366" HorizontalAlignment="Center">
+    		<Viewbox x:Name="viewbox" VerticalAlignment="Center" Height="480" HorizontalAlignment="Center" >
+    			<Canvas HorizontalAlignment="Center" Height="180" VerticalAlignment="Bottom" Width="240" Background="White">
+    				<Canvas Height="180" Canvas.Left="40" Width="160" Background="Black">
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="5"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="15"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="25"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="35"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="45"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="55"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="65"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="75"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="85"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="95"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="105"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="115"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="125"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="135"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="145"/>
+    					<Rectangle Fill="White" Height="180" Stroke="Black" StrokeThickness="0" Width="5" Canvas.Left="155"/>
+    				</Canvas>
+    				<Rectangle x:Name="yellow" Fill="#FFFFFF50" HorizontalAlignment="Left" Height="10" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="10" Canvas.Top="60" RenderTransformOrigin="0.773,-1.233">
+    					<Rectangle.RenderTransform>
+    						<CompositeTransform/>
+    					</Rectangle.RenderTransform>
+    				</Rectangle>
+    				<Rectangle x:Name="blue" Fill="#FF1E1EFF" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" StrokeThickness="0" RenderTransformOrigin="0.5,0.5" Canvas.Top="100">
+    					<Rectangle.RenderTransform>
+    						<CompositeTransform/>
+    					</Rectangle.RenderTransform>
+    				</Rectangle>
+    			</Canvas>
+    		</Viewbox>
+    		<Button x:Name="button" Content="一時停止" HorizontalAlignment="Center" Height="100" VerticalAlignment="Bottom" Width="300" FontFamily="Meiryo UI" FontSize="32" Canvas.Left="364"/>
+    		<Button x:Name="button1" Content="背景を隠す" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="300" FontFamily="Meiryo UI" FontSize="32" Canvas.Left="704"/>
+
+    	</Canvas>
+	</Viewbox>
 </Page>
