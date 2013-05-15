@@ -23,6 +23,7 @@ namespace Footstep
     public sealed partial class MainPage : Page
     {
         private bool IsAnimate;
+        private bool isSmall;
 
         public MainPage()
         {
@@ -39,6 +40,7 @@ namespace Footstep
             Storyboard1.Completed += new EventHandler<object>(this.StartAnimation);
             this.StartAnimation(null,null);
             IsAnimate = true;
+            isSmall = true;
 
             this.SizeChanged += MainPage_SizeChanged;
         }
@@ -82,6 +84,22 @@ namespace Footstep
             {
                 background.Visibility = Visibility.Visible;
                 hide_button.Content = "背景を隠す";
+            }
+        }
+
+        private void size_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (isSmall)
+            {
+                yellow.Width = 15;
+                blue.Width = 15;
+                isSmall = false;
+            }
+            else
+            {
+                yellow.Width = 10;
+                blue.Width = 10;
+                isSmall = true;
             }
         }
     }
