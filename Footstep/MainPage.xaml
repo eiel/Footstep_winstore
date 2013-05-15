@@ -128,6 +128,20 @@
 								</DiscreteObjectKeyFrame.Value>
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>-286</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>194</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="FullScreenPortrait">
@@ -192,6 +206,34 @@
 							<DiscreteObjectKeyFrame KeyTime="0">
 								<DiscreteObjectKeyFrame.Value>
 									<x:Double>821</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>251</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>-470</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>658</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>332</x:Double>
 								</DiscreteObjectKeyFrame.Value>
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
@@ -318,6 +360,20 @@
 								</DiscreteObjectKeyFrame.Value>
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>434</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Double>168</x:Double>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
@@ -358,6 +414,35 @@
     		<Button x:Name="pause_button" Content="一時停止" HorizontalAlignment="Center" Height="100" VerticalAlignment="Bottom" Width="300" FontFamily="Meiryo UI" FontSize="32" Click="Pause_Click" Canvas.Left="214"/>
     		<Button x:Name="hide_button" Content="背景を隠す" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="300" FontFamily="Meiryo UI" FontSize="32" Canvas.Left="704" Click="Hide_Click"/>
     		<Button x:Name="size_button" Content="サイズ変更" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="300" FontFamily="Meiryo UI" FontSize="32" Click="size_button_Click" Canvas.Top="40" Canvas.Left="824"/>
+    		<TextBlock x:Name="textBlock" Height="480" Canvas.Left="76" TextWrapping="Wrap" Canvas.Top="188" Width="226" FontSize="16">
+    			<Run Text="黄色と青色のオブジェクトが動います。"/>
+    			<LineBreak/>
+    			<Run Text="黒と白の背景の部分では、交互に進んでいるように見えるでしょうか？"/>
+    			<LineBreak/>
+    			<Run Text="もし動いてみえない場合は、スナップ表示にしてみたり、少し画面から離れてみましょう。"/>
+    			<LineBreak/>
+    			<Run/>
+    			<LineBreak/>
+    			<Run Text="どうですか？交互に進んでいますよね。"/>
+    			<LineBreak/>
+    			<Run/>
+    			<LineBreak/>
+    			<Run Text="でも、本当に交互に動いているのでしょうか？"/>
+    			<LineBreak/>
+    			<Run Text="一時停止したり、背景を隠したりして、確認してみましょう。"/>
+    			<LineBreak/>
+    			<Run Text="実は同じ速度で動いていませんか？"/>
+    			<LineBreak/>
+    			<Run/>
+    			<LineBreak/>
+    			<Run Text="黄色と青色のオブジェクトの大きさも変えられるようにもしています。"/>
+    			<LineBreak/>
+    			<Run/>
+    			<LineBreak/>
+    			<Run Text="さて、どんなことが起きるでしょうか？"/>
+    			<LineBreak/>
+    			<Run/>
+    		</TextBlock>
 
     	</Canvas>
 	</Viewbox>
